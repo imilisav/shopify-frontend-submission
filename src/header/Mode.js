@@ -5,11 +5,18 @@ import React, { useState } from 'react';
 import './Mode.css';
 
 function Mode({ themeCallback }) {
+
+    const getThemeFromStorage = () => {
+        var theme = localStorage.getItem('theme');
+
+        // Null check, for the first time someone lands on the page.
+        return (theme === null || theme === 'light') ? true : false;
+    }
     
     // Hook for toggling between light/dark theme, light being default.
-    const [isLightToggle, setLightToggle] = useState((localStorage.getItem('theme') === 'light') ? true : false);
+    const [isLightToggled, setLightToggle] = useState(getThemeFromStorage());
     const toggleMode = () => {
-        setLightToggle(!isLightToggle);
+        setLightToggle(!isLightToggled);
         themeCallback();
     }
 
@@ -19,11 +26,11 @@ function Mode({ themeCallback }) {
             <input 
                 type="checkbox" 
                 id="checkbox"
-                checked={!isLightToggle}
+                checked={!isLightToggled}
                 onClick={toggleMode}/>
             <div className="slider round"></div>
             </label>
-            <p>Switch to {isLightToggle ? "Dark Mode" : "Light Mode"}</p>
+            <p>Switch to {isLightToggled ? "Dark Mode" : "Light Mode"}</p>
         </div>
     );
 }
