@@ -2,16 +2,20 @@
 import React from 'react';
 import Search from './Search';
 import Mode from './Mode';
+import logo from './logo.png';
+import logo_dark from './logo_dark.png';
 
 function Header(props) {
+    const { theme, queryCallback, themeCallback } = props;
+
     return (
         <header className="Header-container">
             <img 
-                src={props.theme === 'light' ? "/logo.png" : "/logo_dark.png"} 
+                src={theme === 'light' ? logo : logo_dark} 
                 alt="The Shoppies" 
                 height="70"/>
-            <Search queryCallback={props.queryCallback}/>
-            <Mode themeCallback={props.themeCallback}/>
+            <Search queryCallback={queryCallback}/>
+            <Mode themeCallback={themeCallback}/>
         </header>
     )
 }
