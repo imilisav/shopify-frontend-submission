@@ -44,7 +44,7 @@ function App() {
      * Gets the nominatedMovies array from localStorage.
      */
     const getNominations = () => {
-        return JSON.parse(localStorage.getItem('nominatedMovies') || []);
+        return (localStorage.getItem('nominatedMovies') === null) ? [] : JSON.parse(localStorage.getItem('nominatedMovies'));
     }
 
     /**
