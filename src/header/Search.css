@@ -1,0 +1,17 @@
+.Search-bar {
+    flex: 0.80;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border: 1px solid lightgray; 
+    border-radius: 8px;
+    transition-property: border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    font-weight: 200;
+}
+
+.Search-bar:focus {
+    border: 1px solid #333;
+    outline: none;
+}

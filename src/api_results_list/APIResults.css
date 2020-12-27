@@ -1,0 +1,17 @@
+.Left-column-container {
+    border-right: '1px solid lightgrey';
+}
+
+.Left-column-container h2 {
+    font-weight: 200;
+}
+
+.Results-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
