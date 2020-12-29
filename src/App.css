@@ -1,12 +1,10 @@
 .App {
   text-align: center;
-  overflow-x: hidden;
 }
 
 .Column-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .Header-container {
