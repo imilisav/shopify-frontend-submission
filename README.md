@@ -1,72 +1,28 @@
-# Getting Started with Create React App
+# My Submission For the Shopify UX & Web Developer Intern Challenge
 
-[![Build Status](https://travis-ci.com/imilisav/shopify-frontend-submission.svg?branch=main)](https://travis-ci.com/imilisav/shopify-frontend-submission)
+## Problem
+For my application to the Front-End Developer Intern Position at Shopify, I was asked to implement a application that browses the OMDB api and allows a user to nominate their favourite movies for a chance to win "The Shoppies" award, similar to the Emmys or the Grammys.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For a more thorough explanation of the problem: [Problem Statement Documentation](https://docs.google.com/document/d/1AZO0BZwn1Aogj4f3PDNe1mhq8pKsXZxtrG--EIbP_-w/edit)
 
-## Available Scripts
+## Implementation
+### Overview
+Listed below, are the features I needed to implement (All have been implemented):
+- Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
+- Each search result should list at least its title, year of release and a button to nominate that film.
+- Updates to the search terms should update the result list
+- Movies in search results can be added and removed from the nomination list.
+- If a search result has already been nominated, disable its nominate button.
+- Display a banner when the user has 5 nominations.
 
-In the project directory, you can run:
+There were extra things I added in:
+- Dark theme (who doesn't love a dark theme?)
+- Storing the theme and nomination data into Local Storage
+- I added a poster (if it was provided by the API) along with the required movie information, so the user has a better idea of what movie the API is referring to.
+- I added in a CI/CD process via Travis to build the react app (which checks for build errors) and then delpoys to Github Pages, so I could focus more on building the application itself.
 
-### `npm start`
+### Things I learned from this project
+This project was a great example of how important tools like Redux are when handling state across multiple components in an application. This is especially crucial as the complexity of the application increases. For the sake of this project, as it was not too complex, I opted for just prop-drilling callbacks as I didn't want to bloat the project with more libraries than needed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Github Pages Demo
+[Click here for the end result!](https://imilisav.github.io/shopify-frontend-submission/)
