@@ -23,3 +23,13 @@
     color: #BBE5B3;
     background-color: green;
 }
+
+@media (max-width: 1000px) {
+    .Nominations-container {
+        width: 100vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+}

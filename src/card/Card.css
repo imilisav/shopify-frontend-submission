@@ -1,5 +1,4 @@
 .Card-container {
-    height: 300px;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
@@ -48,4 +47,11 @@
 
 .Card-content h2 {
     margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .Card-container {
+        flex-direction: column;
+        width: 300px;
+    }
 }

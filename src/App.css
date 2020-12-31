@@ -22,3 +22,9 @@
   height: 70px;
   margin: 0.5rem;
 }
+
+@media (max-width: 1000px) {
+  .Column-container {
+    flex-direction: column;
+  }
+}
